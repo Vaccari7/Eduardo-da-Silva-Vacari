@@ -1,0 +1,11 @@
+Info: Read atom netlist
+Info: Directory /home/circuito/board/fpgaxchange exists --if you continue the contents of the directory may be overwritten
+Info: Generating FPGA Xchange file /home/circuito/board/fpgaxchange/circuito.fx
+Info: Atom 8 (entrada1) has key 'input,2.5 V,--,--,Off,--,0,--,0,--,--'
+Info: Atom 10 (entrada2) has key 'input,2.5 V,--,--,Off,--,0,--,0,--,--'
+Info: Atom 12 (saida1) has key 'output,2.5 V,Default,Series 50 Ohm without Calibration,--,FAST,0,--,0,--,--'
+Info: Atom 14 (saida2) has key 'output,2.5 V,Default,Series 50 Ohm without Calibration,--,FAST,0,--,0,--,--'
+Info: Atom 16 (saida3) has key 'output,2.5 V,Default,Series 50 Ohm without Calibration,--,FAST,0,--,0,--,--'
+Info: Atom 18 (saida4) has key 'output,2.5 V,Default,Series 50 Ohm without Calibration,--,FAST,0,--,0,--,--'
+Info: Atom 20 (entrada3) has key 'input,2.5 V,--,--,Off,--,0,--,0,--,--'
+Info: FPGA Xchange file /home/circuito/board/fpgaxchange/circuito.fx generated successfully

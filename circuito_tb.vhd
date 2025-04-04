@@ -1,0 +1,65 @@
+--Aluno:Eduardo da Silva Vacari
+--RA:3387937
+--Data: 04/04/2025
+--Migracao Circuito
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity circuito_tb is
+end circuito_tb;
+
+architecture Behavioral of circuito_tb is
+    -- Declaração dos sinais
+    signal entrada1_tb : STD_LOGIC := '0';
+    signal entrada2_tb : STD_LOGIC := '0';
+    signal entrada3_tb : STD_LOGIC := '0';
+    signal saida1_tb   : STD_LOGIC;
+    signal saida2_tb   : STD_LOGIC;
+    signal saida3_tb   : STD_LOGIC;
+    signal saida4_tb   : STD_LOGIC;
+
+begin
+    -- Instanciação da entidade principal
+    uut: entity work.circuito
+        port map (
+            entrada1 => entrada1_tb,
+            entrada2 => entrada2_tb,
+            entrada3 => entrada3_tb,
+            saida1   => saida1_tb,
+            saida2   => saida2_tb,
+            saida3   => saida3_tb,
+            saida4   => saida4_tb
+        );
+
+    -- Processo para gerar estímulos nas entradas
+    stim_proc: process
+    begin
+        -- Caso 1: Todas as entradas em '0'
+        entrada1_tb <= '0';
+        entrada2_tb <= '0';
+        entrada3_tb <= '0';
+        wait for 10 ns;
+
+        -- Caso 2: Entrada3 = '1', outras em '0'
+        entrada1_tb <= '0';
+        entrada2_tb <= '0';
+        entrada3_tb <= '1';
+        wait for 10 ns;
+
+        -- Caso 3: Entrada3 = '0', outras em '1'
+        entrada1_tb <= '1';
+        entrada2_tb <= '1';
+        entrada3_tb <= '0';
+        wait for 10 ns;
+
+        -- Caso 4: Todas as entradas em '1'
+        entrada1_tb <= '1';
+        entrada2_tb <= '1';
+        entrada3_tb <= '1';
+        wait for 10 ns;
+
+        -- Finaliza a simulação
+        wait;
+    end process;
+end Behavioral;
